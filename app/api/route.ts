@@ -4,7 +4,6 @@ import puppeteer from 'puppeteer';
 export async function GET(req: NextRequest) {
   try {
     const browser = await puppeteer.launch({
-      executablePath: process.env.NEXT_BROWSER,
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
